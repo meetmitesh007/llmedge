@@ -27,8 +27,8 @@ sealed interface ModelSpec {
         val revision: String = "main",
         val preferredQuantizations: List<String> = HuggingFaceHub.DEFAULT_QUANTIZATION_PRIORITIES,
         val token: String? = null,
-        val forceDownload: Boolean = false,
-        val preferSystemDownloader: Boolean = true,
+        val forceDownload: Boolean = true,
+        val preferSystemDownloader: Boolean = false,
         override val hints: ModelHints = ModelHints(),
     ) : ModelSpec {
         override val cacheKey: String =
